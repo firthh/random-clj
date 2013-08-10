@@ -14,12 +14,16 @@
                    (lev "new" "neaw") => 1)
              (fact "handles a missing character"
                    (lev "hello" "helo") => 1)
-             (fact "handles a duplicate character" 
+             (fact "handles a duplicate character"
                    (lev "hello" "heello") => 1)
              )
        (fact "words with 2 characters different"
              (lev "qwerty" "erty") => 2
              (lev "asdfghjkl" "asdqghjl") => 2
              )
+       (fact "long words"
+             (lev "qwertyuiopasdfghjklzxcvbnm1234567890" 
+                  "qwertyuiopasdfghjklzxcvbnm0987654321") => 10)
+
        )
         
