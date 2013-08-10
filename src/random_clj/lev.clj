@@ -1,6 +1,5 @@
 (ns random-clj.lev)
 
-
 (defmulti leven 
   (fn [w1 w2 counter] 
     (if (= 0 (count w1))
@@ -23,7 +22,7 @@
 
 
 
-;;old version
+
 (defn lev 
   ([w1 w2] (lev w1 w2 0))
   ([w1 w2 counter]
@@ -33,4 +32,6 @@
     :else (let [diff (if (= (first w1) (first w2)) 0 1)]
           (min (lev (apply str (rest w1)) (apply str (rest w2)) (+ diff counter))
                (lev w1 (apply str (rest w2)) (+ diff counter))
-               (lev (apply str (rest w1)) w2 (+ diff counter)))))))
+               (lev (apply str (rest w1)) w2 (+ diff counter)))
+          )))
+  )
