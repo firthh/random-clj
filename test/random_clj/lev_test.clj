@@ -22,8 +22,7 @@
              (lev "asdfghjkl" "asdqghjl") => 2
              )
        (fact "long words"
-             (lev "qwertyuiopasdfghjklzxcvbnm1234567890" 
-                  "qwertyuiopasdfghjklzxcvbnm0987654321") => 10)
-
+             (time  (lev "qwertyuiopasdfghjklzxcvbnm1234567890" 
+                         "qwertyuiopasdfghjklzxcvbnm0987654321")) => 10)    
        )
         
