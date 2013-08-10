@@ -17,3 +17,11 @@
               )
       ))
   )
+
+;;todo: add a new implementation using another version of the algorithm
+
+(def lev2
+"How I think it is implemented - we iterate through and build up a table of values
+ Each value is calculated based off two things - 
+     1. if the current letters are the same or different
+     2. the value in the same? column (or to the left) in the row above")
